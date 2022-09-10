@@ -1,17 +1,9 @@
 include_rules = [
-  # These files should not depend on browser code.
-  "-chrome",
-  "-content",
+  # These files should not depend on chromedriver code.
+  "-chrome/test/chromedriver",
 
-  # Except for constants which it links in directly.
-  "+chrome/common/chrome_constants.h",
-  "+chrome/common/chrome_result_codes.h",
-  "+chrome/common/chrome_version.h",
-
-  "+chrome/test/chromedriver",
-
-  "+components/crx_file",
-
-  "+third_party/webdriver",
-  "+third_party/zlib",
+  "+chrome/test/chromedriver/chrome",
+  "+chrome/test/chromedriver/constants",
+  "+chrome/test/chromedriver/js",
+  "+chrome/test/chromedriver/net",
 ]
